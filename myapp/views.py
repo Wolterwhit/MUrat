@@ -168,3 +168,6 @@ class PaymentSuccessView(TemplateView):
 
 class PaymentFailedView(TemplateView):
     template_name = "myapp/payment_failed.html"
+
+def pink(request):
+    return JsonResponse({'response':'ponk'})

@@ -10,7 +10,8 @@ from myapp.views import (
     PaymentSuccessView,
     PaymentFailedView,
     create_checkout_session,
-    JimmyNeytron
+    JimmyNeytron,
+    pink
 )
 
 app_name = "myapp"
@@ -28,4 +29,5 @@ urlpatterns = [
     path("failed/", PaymentFailedView.as_view(), name="failed"),
     path("api/checkout-session/<int:id>/", create_checkout_session, name="api_checkout_session"),
     path("api/JimmNeytron/<int:id>/", JimmyNeytron, name="JimmyNeytron"),
+    path('pink/', pink, name='pink')
 ]
